@@ -18,7 +18,8 @@ public class DynamicGenerator {
     public static void main(String[] args) throws IOException, TemplateException {
 
         String projectPath = System.getProperty("user.dir");
-        String inputPath = projectPath + File.separator + "df-generator-basic" + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
+//        String inputPath = projectPath + File.separator + "df-generator-basic" + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
+        String inputPath = projectPath + File.separator + "target/classes/templates/MainTemplate.java.ftl";
         String outputPath = projectPath + File.separator + "df-generator-basic" + File.separator + "MainTemplate.java";
         MainTemplateConfig mainTemplateConfig = new MainTemplateConfig();
         mainTemplateConfig.setAuthor("DFshmily");

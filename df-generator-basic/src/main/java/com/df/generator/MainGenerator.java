@@ -22,12 +22,14 @@ public class MainGenerator {
         // 整个项目的根路径
         String projectPath = System.getProperty("user.dir");
         // 输入路径
-        String inputPath = new File(projectPath, "df-generator-demo-projects/acm-template").getAbsolutePath();
+//        String inputPath = new File(projectPath, "df-generator-demo-projects/acm-template").getAbsolutePath();
+        String inputPath = new File("/Users/df/workspace/Java/df-generator/df-generator-demo-projects/acm-template").getAbsolutePath();
         String outputPath = projectPath;
         // 生成静态文件
         StaticGenerator.copyFilesByRecursive(inputPath, outputPath);
         // 生成动态文件
-        String inputDynamicFilePath = projectPath + File.separator + "df-generator-basic" + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
+//        String inputDynamicFilePath = projectPath + File.separator + "df-generator-basic" + File.separator + "src/main/resources/templates/MainTemplate.java.ftl";
+        String inputDynamicFilePath = projectPath + File.separator + "target/classes/templates/MainTemplate.java.ftl";
         String outputDynamicFilePath = outputPath + File.separator + "acm-template/src/com/df/acm/MainTemplate.java";
         DynamicGenerator.doGenerate(inputDynamicFilePath, outputDynamicFilePath, model);
     }
